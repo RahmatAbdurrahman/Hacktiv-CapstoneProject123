@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow - Masuk/Daftar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1>FinanceFlow</h1>
+        <div class="auth-form">
+            <h2>Masuk atau Daftar</h2>
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button id="loginBtn">Masuk</button>
+            <button id="registerBtn">Daftar Akun Baru</button>
+            <p id="message" class="error-message"></p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Arahkan ke onboarding jika belum pernah dikunjungi
+        if (!localStorage.getItem('onboarding_visited')) {
+            window.location.href = 'onboarding.html';
+        }
+        // Arahkan ke dashboard jika sudah login
+        if (localStorage.getItem('currentUser')) {
+            window.location.href = 'dashboard.html';
+        }
+    </script>
+</body>
+</html>

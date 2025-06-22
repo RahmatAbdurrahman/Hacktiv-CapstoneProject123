@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di FinanceFlow!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="onboarding-container">
+        <h1>Selamat Datang di FinanceFlow!</h1>
+        <p>Kelola keuangan Anda dengan mudah dan cerdas.</p>
+        <button id="MulaiBtn" class="onboarding-btn">Mulai Sekarang</button>
+    </div>
+
+    <script>
+        document.getElementById('MulaiBtn').addEventListener('click', function() {
+            // Tandai bahwa onboarding telah dilihat
+            localStorage.setItem('onboarding_visited', 'true');
+            window.location.href = 'index.html'; // Arahkan ke halaman login/daftar
+        });
+
+        // Cek apakah onboarding sudah pernah dilihat
+        if (localStorage.getItem('onboarding_visited')) {
+            window.location.href = 'index.html'; // Langsung ke halaman login jika sudah
+        }
+    </script>
+</body>
+</html>
