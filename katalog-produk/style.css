@@ -1,0 +1,13 @@
+/* Di dalam file style.css atau di dalam tag <style> di index.html */
+
+/* Pastikan transisi juga berlaku untuk gambar */
+
+/* Sisa CSS sebelumnya untuk card (opsional, jika Anda belum punya ini) */
+.product-card {
+    transition: all 0.3s ease-in-out; /* Transisi untuk card secara keseluruhan */
+}
+
+.product-card:hover {
+    transform: translateY(-5px); /* Card terangkat */
+    box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.1), 0 6px 8px -3px rgba(0, 0, 0, 0.08); /* Bayangan membesar */
+}
